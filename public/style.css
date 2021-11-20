@@ -1,17 +1,17 @@
 /* Styling for document box-sizing */
 * {
     box-sizing: border-box;
-}
+};
 
 /* Styling for primary button colors */
 .btn-primary {
     background-color: #99A2F0;
-}
+};
 
 /* Styling to set card body background color */
 .card-body {
     background-color: seagreen;
-}
+};
 
 /* Styling for card headers to make background color same as bootstrap nav bar color and text centered and color-white */
 .card-header {
@@ -19,5 +19,5 @@
     background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
     color: white;
     text-align: center;
-}
+};
 

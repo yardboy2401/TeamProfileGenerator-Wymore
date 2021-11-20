@@ -6,6 +6,7 @@
 //5. If Intern then need ID/Email/School
 //6. Overall class should be Employee, then sub classes for the rest that will inherit ID and Email from parent class
 
+//Set require variables for the file
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require('./classes/manager');
@@ -13,8 +14,10 @@ const Intern = require('./classes/intern');
 const Engineer = require('./classes/engineer');
 const makeHtml = require('./makeHtml');
 
+//creates empty team array
 let team = [];
 
+//Ask manager questions using npm inquirer--Also validate that a response was entered
 const startManagerQuestions = () => {
     return inquirer.prompt([
         {
@@ -68,6 +71,7 @@ const startManagerQuestions = () => {
         },
 ])
 
+//Take inquirer responses and push to team array as Manager class
 .then((answers) => {
     const manager = new Manager(
         answers.managerName,
@@ -79,6 +83,7 @@ const startManagerQuestions = () => {
 });
 }
 
+//Inquirer questions for engineer/intern on the team
 const repeatQuestions = () => {
     return inquirer.prompt([
         {
@@ -127,12 +132,14 @@ const repeatQuestions = () => {
             name: "employeeType",
         },
         {
+            //when function will ask this question if previous answer was "Engineer"
             type: "input",
             message: "What is the engineer's Github username?",
             name: "githubUsername",
             when: (answers) => answers.employeeType === "Engineer",
         },
         {
+            //when function will ask this question if previous answer was "Intern"
             type: "input",
             message: "What school did the intern attend?",
             name: "internSchool",
@@ -144,6 +151,7 @@ const repeatQuestions = () => {
             name: "repeat",
         },
     ])
+    //Take inquirer answers and push to team array as Intern or Engineer class
     .then((answers) => {
         if(answers.employeeType === "Intern") {
             const intern = new Intern (
@@ -163,6 +171,7 @@ const repeatQuestions = () => {
             );
             team.push(engineer);
         }
+        //if answer yes to last inquirer question to add another team will ask repeatQuestions() list again otherwise return team array
         if(answers.repeat === true) {
             return repeatQuestions(team);
         } else {
@@ -171,6 +180,7 @@ const repeatQuestions = () => {
     });
 };
 
+//fs writeFile with htmlData to public/index.html
 const writeToFile = (htmlData) => {
     const filename = './public/index.html';
         fs.writeFile(filename, htmlData, function(err) {
@@ -179,14 +189,18 @@ const writeToFile = (htmlData) => {
         })
     }
 
+//Start with managerQuestions() then repeatQuestions() 
 startManagerQuestions()
     .then(repeatQuestions)
+    //Then takes team array as argument to makeHtml()
     .then(team => {
         return makeHtml(team);
     })
+    //Then htmlPage passed to writeToFile() as argument
     .then(htmlPage => {
         return writeToFile(htmlPage);
     })
+    //If error(s) console log error(s)
     .catch(err => {
         console.log(err);
     });

@@ -1,4 +1,8 @@
+//1. Make Team Cards for Manager/Engineer/Intern
+//2. Iterate through team array data to push data to Team cards
+//3. Take Employee cards joined as input to makeTeamPage() to make Html file data for writing to index.html file
 
+//Make manager card with team manager data
 const makeManagerCard = (manager) => {
     return `
     <div class = "col-sm-4">
@@ -15,6 +19,7 @@ const makeManagerCard = (manager) => {
     `;
 };
 
+//
 const makeEngineerCard = (engineer) => {
     return `
     <div class = "col-sm-4">

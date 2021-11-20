@@ -18,7 +18,7 @@ class Employee {
     }
 
     getRole() {
-        return this._role;
+        return "Employee";
     }
 }
 

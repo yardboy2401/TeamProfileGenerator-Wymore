@@ -1,14 +1,14 @@
 
 const makeManagerCard = (manager) => {
     return `
-    <div class = "col-sm-3">
+    <div class = "col-sm-4">
         <div class = card>
-            <h5 class ="card-header justify-content-center">${manager._name}</h5>
+            <h5 class ="card-header">${manager._name}</h5>
             <div class ="card-body">
             <h5 class ="card-title"><i class="fas fa-mug-hot"></i> Manager</h5>
             <p class ="card-text">ID: ${manager._id}</p>
             <p class ="card-text">Office Number: ${manager._officeNumber}</p>
-            <a href ="mailto:${manager._email}" class ="btn btn-primary">Email:${manager._email}</a>
+            <a href ="mailto:${manager._email}" class ="btn btn-primary" target="_blank">Email: ${manager._email}</a>
             </div>
         </div>
     </div>
@@ -17,14 +17,14 @@ const makeManagerCard = (manager) => {
 
 const makeEngineerCard = (engineer) => {
     return `
-    <div class = "col-sm-3">
+    <div class = "col-sm-4">
         <div class = card>
             <h5 class ="card-header">${engineer._name}</h5>
             <div class ="card-body">
             <h5 class ="card-title"><i class="fas fa-laptop-code"></i> Engineer</h5>
             <p class ="card-text">ID: ${engineer._id}</p>
-            <a href ="mailto:${engineer._email}" class ="btn btn-primary">Email:${engineer._email}</a>\n
-            <a href ="http://github.com/${engineer._github}" class ="btn btn-primary">Github:${engineer._github}</a>
+            <a href ="mailto:${engineer._email}" class ="btn btn-primary" target="_blank">Email:${engineer._email}</a>\n
+            <a href ="http://github.com/${engineer._github}" class ="btn btn-primary" target="_blank">Github: ${engineer._github}</a>
             </div>
         </div>
     </div>
@@ -33,14 +33,14 @@ const makeEngineerCard = (engineer) => {
 
 const makeInternCard = (intern) => {
     return `
-    <div class = "col-sm-3">
+    <div class = "col-sm-4">
         <div class = card>
             <h5 class ="card-header">${intern._name}</h5>
             <div class ="card-body">
             <h5 class ="card-title"><i class="fas fa-graduation-cap"></i> Intern</h5>
             <p class ="card-text">ID: ${intern._id}</p>
             <p class ="card-text">School: ${intern._school}</p>
-            <a href ="mailto:${intern._email}" class ="btn btn-primary">Email:${intern._email}</a>
+            <a href ="mailto:${intern._email}" class ="btn btn-primary" target="_blank">Email: ${intern._email}</a>
             </div>
         </div>
     </div>

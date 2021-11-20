@@ -5,7 +5,6 @@ class Manager extends Employee {
     constructor(name, id, email, officeNumber) {
         super(name, id, email) 
         this._officeNumber = officeNumber;
-        this._role = "Manager";
     }
 
     get officeNumber() {
@@ -13,7 +12,7 @@ class Manager extends Employee {
     }
 
     getRole () {
-        return this._role;
+        return "Manager";
     }
     
 }

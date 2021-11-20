@@ -15,6 +15,9 @@ https://github.com/yardboy2401/week10-teamprofilegenerator-wymore
 ##Screenshots
 ![image](https://user-images.githubusercontent.com/85953688/142744153-9cda5a33-2095-46d3-a7c9-41628afb1596.png)
 
+![image](https://user-images.githubusercontent.com/85953688/142744251-9ab590eb-9e43-423f-a9d6-8442b2b87393.png)
+
+
 ## Project Notes
 NPM Inquirer prompts work well in Terminal by executing node index.js from the folder containing the file. Team profile index.html page is made upon completion of Inquirer prompts and placed in the public folder. Classes for Employee, Manager, Engineer, and Intern all have test files as well using NPM Jest that are all passing.
 

@@ -19,7 +19,7 @@ const makeManagerCard = (manager) => {
     `;
 };
 
-//
+//Make Engineer card with team engineer data
 const makeEngineerCard = (engineer) => {
     return `
     <div class = "col-sm-4">
@@ -36,6 +36,7 @@ const makeEngineerCard = (engineer) => {
     `;
 };
 
+//Make Intern card with team intern data
 const makeInternCard = (intern) => {
     return `
     <div class = "col-sm-4">
@@ -52,6 +53,7 @@ const makeInternCard = (intern) => {
     `;
  };
 
+//Iterate through team data to push to Manager/Engineer/Intern cards
 const makeHtml = (htmlData) => {
     let cards = [];
 
@@ -75,10 +77,12 @@ const makeHtml = (htmlData) => {
 
 const employeeCards = cards.join('');
 
+//Team employee cards passed into makeTeamPage() as argument to make HTML page 
 const makeTeam = makeTeamPage(employeeCards)
 return makeTeam;
 };
 
+//Takes employee cards and makes HTML page with them
 const makeTeamPage = (employeeCards) => {
     return `
 <!DOCTYPE html>
@@ -162,4 +166,5 @@ crossorigin="anonymous"
 `;
 };
 
+//export makeHtml for use in index.js file
 module.exports = makeHtml;

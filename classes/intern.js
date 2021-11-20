@@ -1,3 +1,4 @@
+// Creates Engineer Class with name, id, email, school constructor and getters for each and role of "Intern"
 const Employee = require('./employee');
 
 

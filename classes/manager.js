@@ -1,3 +1,4 @@
+// Creates Employee Class with name, id, email, office number constructor and getters for each and role of "Manager"
 const Employee = require('./employee');
 
 

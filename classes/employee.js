@@ -1,3 +1,4 @@
+// Creates Employee Class with name, id, email constructor and getters for each and role of "Employee"
 class Employee {
     constructor(name, id, email) {
         this._name = name;

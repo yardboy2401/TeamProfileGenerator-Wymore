@@ -1,3 +1,4 @@
+// Creates Engineer Class with name, id, email, github constructor and getters for each and role of "Engineer"
 const Employee = require('./employee');
 
 

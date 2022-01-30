@@ -1,4 +1,4 @@
-# Week 10 Homework: Team Profile Generator
+# Team Profile Generator-Wymore
 
 ## Your Task
 The task is to create an application use Node.js and Npm Inquirer to generate a team profile webpage. Testing is key to making code maintainable, so you’ll also need to write a unit test for every part of your code and ensure that it passes each test.

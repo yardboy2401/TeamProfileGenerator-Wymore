@@ -10,7 +10,7 @@ The task is to create an application use Node.js and Npm Inquirer to generate a 
 - NPM Inquirer/Jest Applications
 
 ## Link to GitHub main project
-https://github.com/yardboy2401/week10-teamprofilegenerator-wymore
+https://github.com/yardboy2401/TeamProfileGenerator-Wymore
 
 ##Screenshots
 ![image](https://user-images.githubusercontent.com/85953688/142744153-9cda5a33-2095-46d3-a7c9-41628afb1596.png)
